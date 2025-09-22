@@ -1,7 +1,7 @@
 import StudySession from "../models/studySession.js";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const GEMINI_API_KEY = "AIzaSyDKc2q8NqwvB0gHWkiEzrvUtnDELrcN0MU";
+const GEMINI_API_KEY = "GEMINI KEY";
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
@@ -53,3 +53,4 @@ export const getStudyHistory = async (userId) => {
         .sort({ createdAt: -1 })
         .limit(10);
 };
+
